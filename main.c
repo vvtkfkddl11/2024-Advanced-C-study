@@ -2,17 +2,17 @@
 #include "sort.h"
 #include "utils.h"
 
-int main() { // [TODO] Fill in the parameters
+int main(int argc, char* argv[]) { // [TODO] Fill in the parameters
     FILE *input, *output;
     char *filename;
 
-    if () { // [TODO] Fill in the condition
+    if (argc!=2) { // [TODO] Fill in the condition
         fprintf(stderr, "Command should be format like below\n");
-        fprintf(stderr, "%s try/*_sort.in\n", ); // [TODO] Fill in the arguments
+        fprintf(stderr, "%s try/*_sort.in\n", argv[1]); // [TODO] Fill in the arguments
         exit(EXIT_FAILURE);
     }
 
-    filename = strdup(); // [TODO] Fill in the arguments
+    filename = strdup(argv[1]); // [TODO] Fill in the arguments
     input = fopen(filename, "r");
     if (input == NULL) {
         fprintf(stderr, "Input file error\n");
@@ -29,13 +29,13 @@ int main() { // [TODO] Fill in the parameters
     char line[MAX_BUFFER_SIZE];
     int length = countLines(input);
     int index = 0;
-    Student *students = createStudents(); // [TODO] Fill in the arguments
+    Student *students = createStudents(length); // [TODO] Fill in the arguments
 
     while (fgets(line, MAX_BUFFER_SIZE, input) != NULL) {
         char name[MAX_BUFFER_SIZE];
         int id;
 
-        sscanf(); // [TODO] Fill in the arguments
+        sscanf(line, "%*s %s %*s %*s %*s %d", name, &id); // [TODO] Fill in the arguments
         appendStudent(); // [TODO] Fill in the arguments
     }
 
