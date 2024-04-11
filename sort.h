@@ -8,4 +8,4 @@ int compareByName(Student a, Student b);
 
 int compareById(Student a, Student b);
 
-void quickSort(Student *students, int length, int (*compare)(Student, Student));
+void quickSort(Student *students, int low, int high, int (*compare)(Student, Student));

@@ -28,5 +28,8 @@ int countLines(FILE *input) {
 /* [TODO]
    Implement function swap
 */
-
-void swap(Student *a, Student *b);
+void swap(Student *a, Student *b){
+    Student c = *a;
+    *a = *b;
+    *b = c;
+}
